@@ -12,8 +12,8 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
-\title{Willingness to pay for clean air:Evidence from air purifier markets in China}
-\subtitle{Evidence from air purifier markets in China}
+\title{The welfare effects of vertical integration in multichannel television markets}
+\subtitle{}
  \date{\today}
 %\date{}
 \author{Hao GENG}
@@ -31,22 +31,39 @@
 
 \section{Introduction}
 
-\begin{frame}[fragile]{Why this topic}
+\begin{frame}[fragile]{What others do}
 .   \begin{itemize}
-    \item air pollution is important and severe in developing countries.
-    \item a large economic burden of air pollution does not imply that existing environmental regulations are not optimal
-    \item to make welfare statements: WTP
+    \item important and controversial
+    \item theoretical pro anti-competitive impacts of vertical integration is vast, elimination of double marginalization, alighment of investment incentives.
+    \item empirical, quantitative magnitudes of these potential effects; the overall net welfare effect.
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]{Why estimate air purifier}
+\begin{frame}[fragile]{what we do}
     \begin{itemize}
-        \item demand for home-use purifiers a main defensive investment for reducing indoor air pollution provides infor as to WTP.
+        \item this paper quantifies the welfare effects of vertical integration in cable and satellite television in the context of high-value regional sports programming in the United States market.
+        \item whether the ownership of content by distributors harms welfare
+        \item the industry is big and influential.
+        \item \textbf{our focus on the multichannel television industry and in particular regional sports programming is driven by several factors that create empirical leverage to adddress this question.} 
+        \item first, variation in terms of ownership of regional sports content by cable and satelite distributors, that is , multichannel video programming distributors (MVPDs). 
+        \item variation in ownership patterns both across region and time ,regional sports networks.
+        \item third, the industry is under regulatory and antitrust attention in addition to merger review; the application of "program access rules" and exceptions to this rule.
     \end{itemize}
 \end{frame}
-\begin{frame}{How do we do it?}
+\begin{frame}{What we do 2}
     \begin{itemize}
-        \item Data:scanner data on market transactions, retail store level, 2006-2012. Pollution data and demographics.
-        \item random utility model: Logit&Reg Discontinuity and then BLP.
+        \item two key components:comprehensive data and the specification and estimation of a structural model of the multichannel industry that captures consumer viewership and subscription decisions, MVPD pricing and carriage decisions and bargaining between MVPDs and content providers.
+        \item An important input identifying these effects is our estimates of the change in distributor profits from the addition or removal of an RSN from any of its programming bundles.
+        
+    \end{itemize}
+\end{frame}
+\begin{frame}{Related Literature}
+    \begin{itemize}
+        \item Previous studies on cable industry: reduced-form cross-sectional limited subset of channels.
+        \item Could not separate efficiency from foreclosure incentives
+        \item could not make welfare statements
+        \item We complement 1. structural model to make welfare statements and identify the mechanisms.
+        \item 2. richer panel data set on consumer viewership and bundle subscription and the pricing carriage and bargaining decisions. 
+        \item 
     \end{itemize}
     
 \end{frame}
@@ -77,7 +94,7 @@
     \end{itemize}
 \end{frame}
 
-\section{Data}
+\section{Institutional Detail and Data}
 \begin{frame}{Summary Statistics}
     \begin{columns}[c] 
     \column{9cm}
@@ -95,19 +112,20 @@
 	\end{columns}
 \end{frame}
 
-\section{Demand for Air Purifiers}
-\begin{frame}{random utility model for differentiated products}
+\section{Model}
+\begin{frame}{3.1 Notations and model settings}
     \begin{itemize}
-        \item $u_{ijc}=\beta_{i}x_{jc}+\alpha_{i}p_{jc}+\eta_j+\lambda_c+\xi_{jc}+\epsilon_{ijc}$ (1)
-        \item consumer i city c product j
-        \item $x_{jc} = x_c\cdot e_j$, where $x_c$:ambient air pollution in this city, $e_j\in [0,1]$ is purifier j's effectiveness to reduce indoor particular matters. 
-        \item I think HEPA:high-efficiency particulate arrestance measures $e_j$. 
-        \item $x_{jc}$:the improvements in indoor air quality conditional on the purchase of j,$p_jc$,$\eta_j$:product FE,$\lambda_c$ city FE,$\xi_{jc}$:product-city specific demand shock?.
-        \item $\epsilon_ijc$: type I extreme value distribution.
+        \item $i$:consumer,$m$:market,$t$:time.
+        \item set of downstream video programming distributors (MVPDs):$\mathcal{F}_{t}$;
+        \item set of upstream channels $\mathcal{C}_t$ active in each period t.
+        \item $\mathcal{F}_{mt}$
+        \item assume each MVPD $f \in \mathcal{F}_{mt}$ offers a single bundle of channels $\mathcal{B}_{fmt} \subset \mathcal{C}_t$ in market m and time t, where a household subscribing to this bundle pays a price $p_{fmt}$ and have access to all channels $c \in \mathcal{B}_{fmt}$
+        \item in each period (year), stage 1: channels and distributors bargin bilaterally to decide afiliate fees and distributors set prices and make carriage decisions for each market they operate.
+        \item stage 2: household choose which MVPD or 0 to subscribe to in their market; stage 3: consumers view televison channels.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{4.1 Logit Model}
+\begin{frame}{3.2 stage 3: household viewing}
     \begin{itemize}
         \item $u_{ijc}=\beta_{i}x_{jc}+\alpha_{i}p_{jc}+\eta_j+\lambda_c+\xi_{jc}+\epsilon_{ijc}$ (1)
         \item $\beta_i=\beta$,$\alpha_i=\alpha$
@@ -121,12 +139,13 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{4.1 Logit Model,Ctd}
+\begin{frame}{stage 2}
     \begin{itemize}
-        \item $lns_{jc}-lns_{0c}=\beta x_{jc}+\alpha p_{jc}+\eta_j+\lambda_c+\xi_{jc}$ (3)
-        \item $lns_{jc}-lns_{0c}=\beta x_{c}\cdot HEPA_{j}+\alpha_{i}p_{jc}+\eta_j+\lambda_c+\xi_{jc}$ (4) since $x_{jc}=x_c\cdot e_j$,$e_j=HEPA_j$
-        \item $-\beta/\alpha$:marginal utility for clean air/marginal utility from price. Marginal WTP(MWTP).
-        \item lower bound.
+        \item $u_{ifmt}=\beta^{v}v^{*}_{ifmt}+\boldsbeta^{x}\boldsymbol{x}_{fmt}+\beta^{sat}_{if}+\alpha p_{fmt}+\xi_{fmt}+\epsilon_{ifmt}$ (2)
+        \item $v^{*}_{ifmt}$ consumer's viewship utility for the bundle offered by f, is the optimized value from the time allocation problem in (1).
+        \item $\boldsymbol{x}_{fmt}$ are firm-state and year dummies.
+        \item $p_{fmt}$ is the per month price including any taxes and $\xi_{fmt}$ is scalar unobservable demand shock for he bundle.
+        \item $\beta^{sat} \sim {\rm exponential}(\rho_{f}^{sat})$ is random preference for each satellite distributor
     \end{itemize}
 \end{frame}
 \subsection{Random-coefficient Logit:BLP}
@@ -143,11 +162,11 @@
 \begin{frame}{BLP:Ctd}
     \includegraphics[height=\textheight]{ZhangVersusBLP2.jpg}
 \end{frame}
-\section{Empirical Analysis and Results}
-\begin{frame}{5.1 Logit Estimation}
-	Endogeneity of air pollution and price motives the author to exploit a regression discontinuity design at the spatial border of Huai River.
+\section{Results and parameter estimates}
+\begin{frame}{Estimation}
+	We estimates all of our parameters jointly in a single step; however, for exposition, we discuss in two steps.
 	\begin{itemize}
-		\item exogenous variation gives more plausibility.
+		\item 1. we estimate $\theta \simeq {\theta_1,\theta_2,\theta_3}$
 		\item the discontinuous difference in air pollution created by the policy is long-run variation.
 %		\item \textsc{Smallcaps}
 %		\item \textsc{allsmallcaps}
@@ -247,7 +266,7 @@
 	\end{itemize}
 \end{frame}
 
-\section{Random-coefficient Logit Estimation.}
+\section{Results and Parameter Estimates}
 
 \begin{frame}[fragile]{5.2 Random-coefficient Logit Estimation.}
       \begin{itemize}
@@ -324,189 +343,147 @@
 \begin{frame}{Useful tips for programming of BLP}
     \item \url{https://mark-ponder.com/tutorials/static-discrete-choice-models/some-modified-blp-code/}
 \end{frame}
-\begin{frame}{Font feature test}
-  \begin{itemize}
-    \item Regular
-    \item \textit{Italic}
-    \item \textsc{SmallCaps}
-    \item \textbf{Bold}
-    \item \textbf{\textit{Bold Italic}}
-    \item \textbf{\textsc{Bold SmallCaps}}
-    \item \texttt{Monospace}
-    \item \texttt{\textit{Monospace Italic}}
-    \item \texttt{\textbf{Monospace Bold}}
-    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
-  \end{itemize}
+
+
+\section{6 The Welfare Effects of Vertical Integration}
+\begin{frame}{6 The Welfare Effects of Vertical Integration}
+    use model's estimates to examine how vertical integration affects 1. affiliate fee (supply or not) 2.distributor's pricing and carriage decisions 3. Ultimately, firm and consumer welfare. 
+    \begin{itemize}
+        \item 26 RSNs active 2007, 13 integrated -10 with a cable MVPD, 3 with DirecTV
+        \item CSN Phildelphia and 4SD---owned by cable distributors in "loophole" market
+    \end{itemize}
+\end{frame}
+\begin{frame}{6 The Welfare Effects of Vertical Integration 2}
+    For each of these RSNs, we simulate market outcomes for the year 2007 under "what-ifs"
+    \begin{itemize}
+        \item Non-integration:$\mu=0,\lambda_R=0$
+        \item Integration with PARs: 
+        \begin{itemize}
+            \item Assign the largest cable MVPD in the relevant RSN's market
+            \item $\mu=\hat{\mu}=0.79, \lambda_R=0$
+        \end{itemize}
+        \item Integration without PARs
+        \begin{itemize}
+            \item same as integration with PARs
+            \item except $\lambda_R=\hat{\underline{\lambda_{R}^{Phil}}}$: larger one of two loophole market.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+\begin{frame}{6 The Welfare Effects of Vertical Integration 3}
+    For each of these RSNs, we simulate market outcomes for the year 2007 under "what-ifs"
+    \begin{itemize}
+        \item Non-integration:$\mu=0,\lambda_R=0$
+        \item Integration with PARs: 
+        \begin{itemize}
+            \item Assign the largest cable MVPD in the relevant RSN's market
+            \item $\mu=\hat{\mu}=0.79, \lambda_R=0$
+        \end{itemize}
+        \item Integration without PARs
+        \begin{itemize}
+            \item same as integration with PARs
+            \item except $\lambda_R=\hat{\underline{\lambda_{R}^{Phil}}}$: larger one of two loophole market.
+        \end{itemize}
+        \item each scenerio and each RSN, solve for a set of Bundle Prices, Cariage Decisions, Affiliate Fees satisfying (5), (6), (11)
+        \item assume that a change in ownership for a single RSN does not change national satellite prices to adjust.
+    \end{itemize}
+\end{frame}
+\subsection{6.1 Potential Effects}
+\begin{frame}{6.1 Potential Effects1}
+    Before show the counter-factual, we highlight the effects of VI captured by this model. Suppose that MVPD f integrates with RSN c, and that there is a rival MVPD g.
+    \begin{itemize}
+        \item Bargaining Effects and Foreclosure
+        \begin{itemize}
+            \item Intertal Bargaining: effective affiliate fee falls.
+            \item External Bargaining: PAR in effect---RSN ignores any benefit to c from denying access from g; negotiated fee of g still affected by f's carriages and prices, and internal affiliates fee that c receives from f.
+            \item Internal Bargaining: PAR not in effect: c internalize the benefit from denying g to f$\rightarrow$higher $\tau_{gct}$ or even no supply
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+\begin{frame}{6.1 Potential Effects2}
+    Carriage Effects: $\mu>0$ f internalize the effect that the carriage of c add to c's profit.
+        \begin{itemize}
+            \item direction 1:c's profit $\uparrow$ as $\tau_{fct}\uparrow$ 
+            \item direction 2: c's profit $\downarrow$ as $\tau_{gct}\downarrow$ because f's carriage of c.
+            \item net effect also depends on equilibrium price adjustment and whether rival distributors still carries c.
+        \end{itemize}
+\end{frame}
+\begin{frame}{6.1 Potential Effects3}
+    price effects: $\partial{P_{fmt}}/\partial{\mu}$
+        \begin{itemize}
+            \item direction 1:$P_{fmt}\downarrow/$ to increase f's market share,hence $\tau_{fct}\uparrow$
+            \item direction 2: potential offsetting effect from $\tau_{gct}\downarrow$
+            \item net effect also depends on equilibrium price adjustment and whether rival distributors still carries c.
+            \item In addition, $\partial{P_{fmt}}/\partial{pr(c\in \mathcal{B}_{fmt})}$ 
+        \end{itemize}
+\end{frame}
+\begin{frame}{6.1 Potential Effects-Sum}
+    Direction not determined! Magnitude not determined! Empirical Results Needed!
+\end{frame}
+\subsection{6.2 Results}
+\begin{frame}{6.2 Results-6.2.1 Individual RSN Results}
+    \begin{columns}[c] 
+    \column{9cm}
+    \begin{figure}
+        \centering
+        \includegraphics[height=8cm]{table4-1}
+    \end{figure}
+    \column{4cm}
+    \begin{itemize}
+        \item market share; carriage; prices;welfares
+        \item 3 VI scenerios
+        \item CSN Phila:cable-VI RSN in loophole market
+        \item MSG:cable VI RSN non-loophole
+        \item NESN: non VI RSN
+    \end{itemize}
+	\end{columns}
+\end{frame}
+\begin{frame}{6.2.1 Individual RSN Results 2}
+    \begin{columns}[c] 
+    \column{9cm}
+    \begin{figure}
+        \centering
+        \includegraphics[height=8cm]{table4-2}
+    \end{figure}
+    \column{4cm}
+    \begin{itemize}
+        \item foreclose:the frac of simulations RSN foreclose to at least 1 rival distributor.
+        \item *comcast: the name of the owner (assigned if Non-VI)
+        \item CSN Phila:cable-VI RSN in loophole market
+        \item MSG:cable VI RSN non-loophole
+        \item NESN: non VI RSN
+    \end{itemize}
+	\end{columns}
 \end{frame}
 
-\begin{frame}{Lists}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.33\textwidth}
-      Items
-      \begin{itemize}
-        \item Milk \item Eggs \item Potatos
-      \end{itemize}
-
-    \column{0.33\textwidth}
-      Enumerations
-      \begin{enumerate}
-        \item First, \item Second and \item Last.
-      \end{enumerate}
-
-    \column{0.33\textwidth}
-      Descriptions
-      \begin{description}
-        \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
-      \end{description}
-  \end{columns}
+\begin{frame}{6.2.2 Average Results}
+    \begin{figure}
+        \footnotesize
+        \centering
+        \includegraphics[height=7.2cm, width=11cm]{table5}
+        \label{fig:my_label}
+    \end{figure}
 \end{frame}
-\begin{frame}{Animation}
-  \begin{itemize}[<+- | alert@+>]
-    \item \alert<4>{This is\only<4>{ really} important}
-    \item Now this
-    \item And now this
-  \end{itemize}
+\begin{frame}{6.2.2 Average Results:1st effect}
+    \begin{itemize}
+        \item Bargaining Effect and Foreclosure
+        \item Efficiency effect: reduction of double marginalization and increased carriage
+        \item scenerio (ii) vs (i)
+        \item carriage $\uparrow$ 9.4\%, $p_{mt}\downarrow 1.2\%$, price reduction $\leftarrow$ reduction of double marginalization. 
+        \item Cable+RSN surplus $\uparrow$ 0.3\%, satellite surplus $-2.2\%$
+        \item consumer welfare mainly from lower cable prices: recompute the equilibrium outcome hold cable price fixed.
+    \end{itemize}
 \end{frame}
-\begin{frame}{Figures}
-  \begin{figure}
-    \newcounter{density}
-    \setcounter{density}{20}
-    \begin{tikzpicture}
-      \def\couleur{alerted text.fg}
-      \path[coordinate] (0,0)  coordinate(A)
-                  ++( 90:5cm) coordinate(B)
-                  ++(0:5cm) coordinate(C)
-                  ++(-90:5cm) coordinate(D);
-      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
-      \foreach \x in {1,...,40}{%
-          \pgfmathsetcounter{density}{\thedensity+20}
-          \setcounter{density}{\thedensity}
-          \path[coordinate] coordinate(X) at (A){};
-          \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
-                              -- (C) coordinate[pos=.10](B)
-                              -- (D) coordinate[pos=.10](C)
-                              -- (X) coordinate[pos=.10](D);
-          \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
-      }
-    \end{tikzpicture}
-    \caption{Rotated square from
-    \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
-  \end{figure}
+\begin{frame}{6.2.2 Average Results:1st effect}
+    \begin{itemize}
+        \item Bargaining Effect and Foreclosure
+        \item Foreclosure effect: without PAR
+        \item scenario (ii) vs (iii)
+        \item consumer welfare and total welfare:$-0.2\%$,$-0.1\%$
+        \item this results from two effects: RSN refuse to supply one rival MVPD; RSN raise the affiliate fee.
+    \end{itemize}
 \end{frame}
-\begin{frame}{Tables}
-  \begin{table}
-    \caption{Largest cities in the world (source: Wikipedia)}
-    \begin{tabular}{lr}
-      \toprule
-      City & Population\\
-      \midrule
-      Mexico City & 20,116,842\\
-      Shanghai & 19,210,000\\
-      Peking & 15,796,450\\
-      Istanbul & 14,160,467\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\end{frame}
-\begin{frame}{Blocks}
-  Three different block environments are pre-defined and may be styled with an
-  optional background color.
-
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-    \column{0.5\textwidth}
-
-      \metroset{block=fill}
-
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-  \end{columns}
-\end{frame}
-\begin{frame}{Math}
-\includegraphics[width=\textwidth]{1}
-  \begin{equation*}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
-  \end{equation*}
-\end{frame}
-\begin{frame}{Line plots}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mlineplot,
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-        \addplot {sin(deg(x))};
-        \addplot+[samples=100] {sin(deg(2*x))};
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Bar charts}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mbarplot,
-        xlabel={Foo},
-        ylabel={Bar},
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
-      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
-      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
-
-      \legend{lorem, ipsum, dolor}
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Quotes}
-  \begin{quote}
-    Veni, Vidi, Vici
-  \end{quote}
-\end{frame}
-
-{%
-\setbeamertemplate{frame footer}{My custom footer}
-\begin{frame}[fragile]{Frame footer}
-    \themename defines a custom beamer template to add a text to the footer. It can be set via
-    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
-\end{frame}
-}
-
-\begin{frame}{References}
-  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
-\end{frame}
-
-\section{Conclusion}
-
+\subsection{Robustness}
+\section{Conclusion Remarks}
 \begin{frame}{Summary}
 
   Get the source of this theme and the demo presentation from
@@ -526,43 +503,7 @@
   Questions?
 \end{frame}
 }
-% this is comments.
-\begin{comment}
-{
-    \metroset{titleformat frame=smallcaps}
-\begin{frame}{Small caps}
-	This frame uses the \texttt{smallcaps} titleformat.
 
-	\begin{alertblock}{Potential Problems}
-		Be aware, that not every font supports small caps. If for example you typeset your presentation with pdfTeX and the Computer Modern Sans Serif font, every text in smallcaps will be typeset with the Computer Modern Serif font instead.
-	\end{alertblock}
-\end{frame}
-}
-
-{
-\metroset{titleformat frame=allsmallcaps}
-\begin{frame}{All small caps}
-	This frame uses the \texttt{allsmallcaps} titleformat.
-
-	\begin{alertblock}{Potential problems}
-		As this titleformat also uses smallcaps you face the same problems as with the \texttt{smallcaps} titleformat. Additionally this format can cause some other problems. Please refer to the documentation if you consider using it.
-
-		As a rule of thumb: Just use it for plaintext-only titles.
-	\end{alertblock}
-\end{frame}
-}
-
-{
-\metroset{titleformat frame=allcaps}
-\begin{frame}{All caps}
-	This frame uses the \texttt{allcaps} titleformat.
-
-	\begin{alertblock}{Potential Problems}
-		This titleformat is not as problematic as the \texttt{allsmallcaps} format, but basically suffers from the same deficiencies. So please have a look at the documentation if you want to use it.
-	\end{alertblock}
-\end{frame}
-}
-\end{comment}
 \appendix
 
 \begin{frame}[fragile]{Backup slides}
